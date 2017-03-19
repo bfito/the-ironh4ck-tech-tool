@@ -5,9 +5,8 @@ import { HttpModule } from '@angular/http';
 import { Routes , RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
+
 import { NavComponent } from './nav/nav.component';
-=======
 import { GodService } from './services/god.service';
 
 //ROOTS
@@ -17,7 +16,6 @@ const routes: Routes =  [
   { path: 'question', component: AppComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
->>>>>>> fd323fb7a62fdbed428b588798ccf8557152cdf0
 
 @NgModule({
   declarations: [
@@ -27,7 +25,8 @@ const routes: Routes =  [
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes) //Need this for routes to work
   ],
   providers: [GodService],
   bootstrap: [AppComponent]

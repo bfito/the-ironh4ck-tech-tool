@@ -1,11 +1,8 @@
-header {
-  height:400px;
-  background:url(../../assets/img/photography_background.jpg) no-repeat center;
-  background-size:cover;
-}
+
 
 .navbar-nav {
   margin-top:14px;
+
 }
 
 .navbar-nav .nav li {
@@ -30,7 +27,7 @@ header {
   font-weight:bold;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav >  > a, .navbar-default .navbar-nav >  > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color:#fff;
   background-color:rgba(0,0,0,0.6);
   font-weight:bold;
@@ -50,8 +47,9 @@ nav.navbar.navbar-default {
 .navbar-brand {
   height:75px;
   font-size:18px;
-  color:#fff !important;
+  color: #bbb !important;
   text-shadow:1px 1px 1px rgba(0,0,0,0.4);
+  margin-top: 20px;
 }
 
 .navbar-brand span.text-title {
@@ -152,4 +150,8 @@ a.navbar-brand.navbar-link {
 
 ul.nav.navbar-nav {
   float:right;
+}
+
+nav {
+  background: rgba(226,226,226,1) !important;  
 }
