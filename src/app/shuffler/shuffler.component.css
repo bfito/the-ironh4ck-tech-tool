@@ -1,3 +1,18 @@
 ul{
   list-style: none;
+  cursor: pointer;
+}
+li{
+  padding: 10px;
+}
+li:hover{
+  background-color: #eee;
+}
+
+.students li{
+  color: #333;
+}
+.deletedStudents li{
+  color: #ddd;
+  text-decoration:line-through;
 }
