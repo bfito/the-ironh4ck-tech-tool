@@ -19,11 +19,11 @@
             <div class="account-wall">
                 <form class="form-signin">
                   <label for = "name"> Full Name </label>
-                <input [(ngModel)]="newUser.name" type="text" class="form-control" placeholder="Joe Schmoe" required autofocus>
+                <input  type="text" class="form-control" placeholder="Joe Schmoe" [(ngModel)]="newUser.name" name = "name" required autofocus>
                 <button (click)="login()" class="btn btn-lg btn-primary btn-block" type="submit">
                   Log in</button>
                 <label class="checkbox pull-left">
-                    <input type="checkbox" value="remember-me" [(ngModel)]="newUser.teacher">
+                    <input type="checkbox" value="remember-me"  name = "teacher" [(ngModel)]="newUser.teacher">
                     I am a teacher
                 </label>
                 <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
