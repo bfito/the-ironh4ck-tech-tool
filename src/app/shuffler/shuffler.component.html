@@ -1,15 +1,18 @@
 <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-3 text-center">
+      <ol class='students'>
+        <li *ngFor='let student of students; let i = index'  (click)='deleteStudent(i)'>
+          {{student.name}}
+        </li>
+      </ol>
+      <ul class='deletedStudents'>
+        <li *ngFor='let student of deletedStudents ; let i = index'  (click)='undoDeleteStudent(i)'>
+          {{student.name}}
+        </li>
+      </ul>
+      <button class='btn btn-primary' (click)='shuffleStudents()'>Shuffle</button>
+    </div>
 
-  <ol class='students'>
-    <li *ngFor='let student of students; let i = index'  (click)='deleteStudent(i)'>
-      {{student.name}}
-    </li>
-  </ol>
-  <ul class='deletedStudents'>
-    <li *ngFor='let student of deletedStudents ; let i = index'  (click)='undoDeleteStudent(i)'>
-      {{student.name}}
-    </li>
-  </ul>
-  <button (click)='shuffleStudents()'>Shuffle</button>
-
+  </div>
 </div>
