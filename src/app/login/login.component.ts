@@ -1,32 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { GodService } from '../services/god.service';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [GodService]
 })
 export class LoginComponent implements OnInit {
-  userName: string = '';
-  isTeacher: boolean = false;
+  name: string = '';
+  teacher: boolean = false;
 
   // constructor(private theLogin: GodService ) { }
-  constructor() { }
+  constructor(private theGodService: GodService ) { }
 
     newUser = {};
 
   ngOnInit() {
   }
 
-  addNewUser (user) {
+  login (user) {
     const newUser = {
-      userName: user.userName,
-      teacher: user.isTeacher,
+      name: user.name,
+      teacher: user.teacher,
     }
 
-    console.log(newUser.userName);
+    this.theGodService.login(newUser.name, newUser.teacher);
+    console.log(this.theGodService);
+    console.log(newUser.name);
     console.log(newUser.teacher);
-    // this.theLogin.addNewUser(newUser.userName);
-    // console.log(this.theLogin);
   }
 }

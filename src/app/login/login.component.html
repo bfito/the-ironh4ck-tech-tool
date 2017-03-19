@@ -1,9 +1,9 @@
 <h2> Register </h2>
 
 <div>
-  <input [(ngModel)]="newUser.userName" type="text">
-  <button (click)="addNewUser(newUser)">OK</button>
+  <input [(ngModel)]="newUser.name" type="text">
+  <button (click)="login(newUser)">OK</button>
 </div>
 <div>
-  <input type="checkbox" name="teacher" [(ngModel)]="newUser.isTeacher">Teacher
+  <input type="checkbox" name="teacher" [(ngModel)]="newUser.teacher">Teacher
 </div>
