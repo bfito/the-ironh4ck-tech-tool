@@ -1,3 +1,6 @@
-<p>
-  shuffler works!
-</p>
+<ul>
+  <li *ngFor='let student of students'>
+    {{student.name}}
+  </li>
+</ul>
+<button (click)='shuffleStudents()'>Shuffle</button>

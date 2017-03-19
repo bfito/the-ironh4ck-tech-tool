@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class GetStudentsService {
 
-  constructor(private theHttp: Http) {
+  constructor(private theHttp: Http) {}
 
 
     fetchStudents() {
@@ -17,6 +17,6 @@ export class GetStudentsService {
 
 
 
-  }
+
 
 }

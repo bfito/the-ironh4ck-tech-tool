@@ -9,25 +9,16 @@ import { GodService } from '../services/god.service';
   providers: [GodService]
 })
 export class LoginComponent implements OnInit {
-  name: string = '';
-  teacher: boolean = false;
+
+  newUser = {};
 
   constructor(private theGodService: GodService ) { }
 
-    newUser = {};
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  login (user) {
-    const newUser = {
-      name: user.name,
-      teacher: user.teacher,
-    }
-
+  login (newUser) {
     this.theGodService.login(newUser.name, newUser.teacher);
-    console.log(this.theGodService);
-    console.log(newUser.name);
-    console.log(newUser.teacher);
+    console.log(this.theGodService.user);
+
   }
 }
