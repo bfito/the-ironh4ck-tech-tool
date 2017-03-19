@@ -1,6 +1,8 @@
 ul{
   list-style: none;
-  cursor: pointer;
+}
+ul, ol{
+    cursor: pointer;
 }
 li{
   padding: 10px;
