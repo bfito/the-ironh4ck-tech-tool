@@ -10,23 +10,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { GodService } from './services/god.service';
+import { ShufflerComponent } from './shuffler/shuffler.component';
 
 //ROOTS
 const routes: Routes =  [
-  { path: 'login', component: AppComponent },
-  { path: 'shuffler', component: AppComponent },
-  { path: 'question', component: AppComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-];
-
-import { NavComponent } from './nav/nav.component';
-import { GodService } from './services/god.service';
-
-//ROOTS
-const routes: Routes =  [
-  { path: 'login', component: AppComponent },
-  { path: 'shuffler', component: AppComponent },
-  { path: 'question', component: AppComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'shuffler', component: ShufflerComponent },
+  { path: 'questions', component: ShufflerComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
@@ -34,7 +24,7 @@ const routes: Routes =  [
   declarations: [
     AppComponent,
    LoginComponent,
-    NavComponent
+    ShufflerComponent
   ],
   imports: [
     BrowserModule,

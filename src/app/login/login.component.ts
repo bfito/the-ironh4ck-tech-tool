@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
   name: string = '';
   teacher: boolean = false;
 
-  // constructor(private theLogin: GodService ) { }
   constructor(private theGodService: GodService ) { }
 
     newUser = {};
