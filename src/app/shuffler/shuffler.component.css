@@ -1,0 +1,22 @@
+ul{
+  list-style: none;
+}
+ul, ol{
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+li{
+  padding: 10px;
+}
+li:hover{
+  background-color: #eee;
+}
+
+.students li{
+  color: #333;
+}
+.deletedStudents li{
+  color: #ddd;
+  text-decoration:line-through;
+}
